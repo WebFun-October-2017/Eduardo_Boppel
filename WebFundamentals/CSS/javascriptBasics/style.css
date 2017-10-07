@@ -1,0 +1,87 @@
+body {
+  background-color: darkblue;
+}
+
+.wrapper {
+  width: 970px;
+  margin: 0 auto;
+}
+
+a {
+  color: DarkTurquoise;
+}
+
+
+
+/********** HEADER **********/
+h1 {
+  background-color: red;
+  padding: 20px 20px;
+  border-radius: 10px;
+  margin: 20px 0px;
+  color: white;
+}
+
+
+
+/********** MENU  **********/
+.menu {
+  background-color: darkcyan;
+  display: inline-block;
+  width: 200px;
+  border-radius: 20px;
+  margin-right: 20px;
+  padding: 5px 20px 5px 0px;
+  color: white;
+}
+
+.menu ul {
+  list-style: none;
+  margin-left: -15px;
+}
+
+.menu ul ul li {
+  list-style: initial;
+  margin-left: -5px;
+}
+
+.menu ul ul ul li {
+  list-style: circle;
+  margin-left: -15px;
+}
+
+
+
+/********** MAIN CONTENT   **********/
+main {
+  display: inline-block;
+  width: 680px;
+  vertical-align: top;
+  background-color: black;
+  border-radius: 20px;
+  color: white;
+  padding: 10px 20px;
+}
+
+main ul {
+  margin-left: -15px;
+}
+
+main ul li {
+  margin: 10px 0;
+}
+
+main span {
+  color: MediumPurple;
+}
+
+
+/********** FOOTER  **********/
+
+footer {
+  background-color: gray;
+  color: white;
+  border-radius: 15px;
+  padding: 5px 20px;
+  margin-top: 20px;
+}
