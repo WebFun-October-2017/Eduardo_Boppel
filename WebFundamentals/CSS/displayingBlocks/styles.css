@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  background-color: beige;
+  width: 1000px;
+  margin: auto;
+  padding: 20px;
+  ;
+}
+
+.header {
+  text-align: center;
+  margin: 30px 0 20px 0px;
+}
+
+.header h1 {
+  display: inline-block;
+  font-size: 3.5em;
+}
+
+.header img {
+  width: 120px;
+}
+
+.main_content {
+  text-align: center;
+}
+
+
+.imagebox {
+  height: 145px;
+  width: 145px;
+  display: inline-block;
+  padding: 15px;
+  border: 4px solid black;
+  margin: 4px;
+  vertical-align: top;
+}
+
+.blue {
+  background-color: lightblue;
+}
+
+.red {
+  background-color: pink;
+}
+
+img {
+  width: 100%;
+}
