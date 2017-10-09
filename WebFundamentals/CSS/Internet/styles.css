@@ -1,0 +1,209 @@
+/************ NORMALIZE AND GENERAL STYLES  ****************/
+@import "normalize.css";
+
+.wrapper {
+  width: 970px;
+  margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+.button {
+  display: block;
+  padding: 10px;
+  color: white;
+  border-radius: 8px;
+  text-align: center;
+  margin: 5px 0;
+  text-decoration: none;
+  box-shadow: 1px 1px 2px black;
+}
+
+aside, main {
+  background-color: #e8e8e8;
+  display: inline-block;
+  min-height: 865px;
+}
+
+/************************ HEADER ************************/
+header img {
+  width: 100px;
+}
+
+header h1 {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 2.5em;
+  color: #474747;
+}
+
+header span {
+  color: #26669c;
+}
+
+header h2 {
+  background-color: blue;
+  color: white;
+  padding: 15px 25px;
+  font-size: 1.8em;
+  margin: -25px 0 0;
+  background: #5485ab; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#27679c, #5485ab, #27669c); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#27679c, #5485ab, #27669c); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#27679c, #5485ab, #27669c); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#27679c, #5485ab, #27669c); /* Standard syntax */
+}
+
+
+/************************ ASIDE ************************/
+
+aside {
+  width: 200px;
+  padding: 0 2px;
+  vertical-align: top;
+}
+
+.aside_top {
+  padding: 0 2px 30px;
+  border-bottom: 1px solid gray;
+}
+
+.aside_top h4 span {
+  color: #d72626;
+}
+
+.aside_top p span {
+  color: #26669c;
+}
+
+.advertisement {
+  background: url(images/ad_background.png);
+  padding: 0 4px 20px;
+  color: white;
+  text-align: center;
+  font-size: 1.7em;
+  margin-top: 35px;
+  border-top: 2px solid black;
+  box-shadow: 1px 1px 2px black;
+}
+
+.advertisement img {
+  width: 100px;
+  margin: -10px 0 0;
+}
+
+.blue_btn {
+    background: #457fae; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#679bc3, #29689e); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#679bc3, #29689e); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#679bc3, #29689e); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#679bc3, #29689e); /* Standard syntax */
+}
+
+.orange_btn  {
+  background: #eb8f2f; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#e9ab5c, #ee7302); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#e9ab5c, #ee7302); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#e9ab5c, #ee7302); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#e9ab5c, #ee7302); /* Standard syntax */
+}
+
+.lightblue_btn {
+  background: #3fc8dd; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#7ed1de, #03c0dd); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#7ed1de, #03c0dd); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#7ed1de, #03c0dd); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#7ed1de, #03c0dd); /* Standard syntax */
+  display: inline-block;
+  font-size: 0.5em;
+  padding: 7px 50px;
+}
+
+
+/************************ MAIN ************************/
+
+main {
+  width: 705px;
+  padding-left: 60px;
+  margin-left: -4px;
+  font-size: 0.9em;
+}
+
+main h3 {
+  color: #26669c;
+  font-size: 1.4em;
+  margin-bottom: -10px;
+}
+
+main span, main a {
+  color: #0297ad;
+  text-decoration: none;
+}
+
+
+.main_top {
+  height: 70px;
+  border-bottom: 1px solid gray;
+}
+
+.main_top img {
+  height: 15px;
+  margin: 10px 0 0 10px;
+}
+
+.contact_info {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  margin: -15px 0 0 540px;
+}
+
+.contact_info p {
+  margin: 0;
+  font-size: 0.6em;
+}
+
+.contact_info .phone {
+  color: #00c0dd;
+  font-size: 1.6em;
+}
+
+.contact_info img {
+  height: 40px;
+  margin: 10px 10px 0 0;
+  position: absolute;
+  left: -50px;
+  top: -5px;
+}
+
+
+.main_middle {
+  padding: 0 15px;
+}
+
+.main_middle img {
+  width: 300px;
+  margin: 20px 190px;
+}
+
+.main_middle li {
+  margin: 15px 0;
+}
+
+
+.main_box {
+  border: 4px solid #0087dd;
+  margin: 25px 0;
+}
+
+.main_box img {
+  width: 140px;
+  vertical-align: top;
+  margin: 15px 10px;
+}
+
+.box_text {
+  display: inline-block;
+  width: 510px;
+  margin: 0;
+}
