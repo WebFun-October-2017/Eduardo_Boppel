@@ -1,0 +1,116 @@
+.wrapper {
+  width: 970px;
+  margin: 0 auto;
+  background-color: #dddfd4;
+  padding: 15px;
+  font-family: "Lucida Console", Monaco, monospace
+}
+
+h2, h3 {
+  margin: 0;
+}
+
+/*************** HEADER ****************/
+
+header {
+  background: #3fb0ac;
+  height: 90px;
+}
+
+header img {
+  height: 50px;
+  margin: 20px 0 15px 15px;
+}
+
+header h1 {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 2em;
+
+}
+
+header ul {
+  list-style: none;
+  display: inline-block;
+  vertical-align: top;
+  margin: 35px 0 0 60px;
+  padding: 0;
+}
+
+header ul li {
+  display: inline-block;
+  margin: 0 6px;
+  font-size: 0.8em;
+}
+
+header a {
+  color: white;
+}
+
+
+/*************** MAIN ****************/
+main {
+  margin: 20px 0;
+  background-color: #fae596;
+  overflow: hidden;
+}
+
+.box {
+  display: inline-block;
+  vertical-align: top;
+  margin: 15px;
+  padding: 5px;
+  background-color: #173f43;
+  color: #dddfd4;
+}
+
+.left {
+  width: 250px;
+  height: 560px;
+  margin-right: 20px;
+  float: left;
+}
+
+.sm {
+  width: 170px;
+  height: 180px;
+}
+
+.md {
+  width: 280px;
+  height: 160px;
+}
+
+.lg {
+  width: 610px;
+  height: 140px;
+}
+
+
+.box h2 {
+  font-size: 1.2em;
+}
+
+.box h3 {
+  font-size: 1em;
+}
+
+.box p {
+  font-size: 0.85em;
+  margin: 15px;
+}
+
+.box span {
+  color: #44b0a7;
+}
+
+
+
+
+/*************** FOOTER ****************/
+footer {
+  background: #3fb0ac;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+}
