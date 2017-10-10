@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  width: 1000px;
+  height: 690px;
+  margin: 0 auto;
+  background: #eeeeee;
+}
+
+
+/************** CONTAINERS **************/
+
+.container {
+  display: inline-block;
+}
+
+.group {
+  width: 46px;
+  vertical-align: top;
+}
+
+.blue {
+  width: 98px;
+}
+
+.blue .box {
+  background: #689bff;
+}
+
+.pink {
+  width: 506px;
+  margin-left: 20px;
+}
+
+.pink .box {
+  background: #fd9a98;
+}
+
+.yellow {
+  width: 302px;
+  position: relative;
+}
+
+.yellow .box {
+  background: #fecb00;
+}
+
+.yellow .positioned {
+  position: absolute;
+  top: -65px;
+  right: 0;
+}
+
+.green {
+  width: 750px;
+  margin: 30px 0 0 173px;
+  position: relative;
+}
+
+.green .box {
+  background: #1fca21;
+}
+
+
+/************** BOXES **************/
+
+.box {
+  width: 45px;
+  height: 60px;
+  margin: 2px 0;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 0.65em;
+  display: inline-block;
+}
+
+.box h1 {
+  font-size: 1.9em;
+  color: #19139f;
+}
+
+.box p {
+  margin-top: 3px;
+}
+
+
+.row h2, .row h3 {
+  width: 20px;
+  color: red;
+  display: inline-block;
+  padding: 7px 7px 12px 20px;
+  font-size: 0.7em;
+}
+
+.row h2 {
+  padding: 5px 16px 5px 10px;
+}
+
+.group h3 {
+  color: red;
+  font-size: 0.7em;
+  padding: 28px 0 25px 20px;
+}
+
+
+
+
+
+
+
+.hidden {
+  visibility:hidden;
+  vertical-align: bottom;
+}
+
+.space {
+  margin-left: 15px !important;
+}
+
+.label {
+  color: red;
+  font-size: 0.8em;
+  position: absolute;
+  left: -120px;
+  top: 25px;
+}
+
+.label:last-of-type {
+  left: -120px;
+  top: 90px;
+}
+
+.green::before {
+  content: "*";
+  color: red;
+  position: absolute;
+  top: 25px;
+  left: -10px;
+}
+.green::after {
+  content: "**";
+  color: red;
+  position: absolute;
+  top: 90px;
+  left: -18px;
+}
