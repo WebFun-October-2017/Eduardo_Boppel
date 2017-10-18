@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hover In/Out</title>
+  <style>
+    .wrapper {
+      width: 1100px;
+      margin: 0 auto;
+      padding-top: 50px;
+    }
+    img {
+      height: 120px;
+      width: 250px;
+      border: 1px solid black;
+    }
+
+  </style>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+
+
+      $('img').hover(function(){
+        var main = $(this).attr('src')
+        var secondary = $(this).attr('data-alt-src')
+        $(this).attr('src', secondary);
+        $(this).attr('data-alt-src', main);
+
+      }, function(){
+        var main = $(this).attr('src')
+        var secondary = $(this).attr('data-alt-src')
+        $(this).attr('src', secondary);
+        $(this).attr('data-alt-src', main);
+      });
+
+    }); //END OF DOCUMENT LOAD
+
+  </script>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Our Vehicles</h1>
+    <img src="images/bmw-gray.png" data-alt-src="images/bmw-light.png">
+    <img src="images/ferrari-red.jpeg" data-alt-src="images/ferrari-blue.jpeg">
+    <img src="images/harley-blue.jpeg" data-alt-src="images/harley-red.jpeg">
+    <img src="images/mb-black.jpeg" data-alt-src="images/mb-red.jpeg">
+  </div>
+</body>
+</html>
