@@ -1,0 +1,153 @@
+.wrapper {
+  width: 970px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+}
+
+p, a {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+.visited {
+  background-color: red !important;
+}
+
+.redinfo {
+  color: red;
+}
+
+ /********************* HEADER ***********************/
+header {
+  padding: 0 30px;
+}
+
+header h1 {
+  display: inline-block;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+header h2 {
+  display: inline-block;
+  margin-left: 375px;
+  font-size: 1.3em;
+  font-family: "Arial", "Helvetica", sans-serif;
+}
+
+
+
+/**************** GENERAL COLOR FORMATTING ***************/
+main {
+  background: #6f5964; /* For browsers that do not support gradients */
+  background: -webkit-radial-gradient(circle, #9f9399, #6f5964, #4e3a43); /* Safari */
+  background: -o-radial-gradient(circle, #9f9399, #6f5964, #4e3a43); /* Opera 11.6 to 12.0 */
+  background: -moz-radial-gradient(circle, #9f9399, #6f5964, #4e3a43); /* Firefox 3.6 to 15 */
+  background: radial-gradient(circle, #9f9399, #6f5964, #4e3a43); /* Standard syntax */
+  padding: 25px
+}
+
+.title {
+  background: #8e8d99; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#a4a3aa, #8e8d99, #abaab0); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#a4a3aa, #8e8d99, #abaab0); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#a4a3aa, #8e8d99, #abaab0); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#a4a3aa, #8e8d99, #abaab0); /* Standard syntax */
+  padding: 10px 15px;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.background {
+  background: #fefdfe; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #fefdfe , #dbcddb); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #fefdfe, #dbcddb); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #fefdfe, #dbcddb); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #fefdfe , #dbcddb); /* Standard syntax */
+}
+
+
+/******************** MAIN CONTENT *******************/
+.profile_pic {
+  height: 275px;
+  border: 4px solid lightgray;
+  margin-right: 25px;
+}
+
+.about {
+  display: inline-block;
+  width: 465px;
+  vertical-align: top;
+}
+
+.description {
+  padding: 1px 15px 30px;
+  font-size: 0.95em;
+  min-height: 210px;
+}
+
+
+
+.client {
+  display: inline-block;
+  width: 290px;
+  margin: 20px 20px 0 0;
+  padding-bottom: 20px;
+  vertical-align: top;
+}
+
+.client:last-child {
+  margin-right: 0;
+}
+
+.client_image {
+  width: inherit;
+}
+
+.client p {
+  margin: 10px 15px 60px;
+  font-size: 0.9em;
+  height: 115px;
+}
+
+
+.technologies {
+  margin-bottom: 20px;
+  padding: 12px 15px 0px;
+}
+
+.technologies img {
+  width: 40px;
+  margin: 4px;
+}
+
+.link {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.link a {
+  text-decoration: none;
+  color: white;
+  background-color: #407d61;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+
+/****************** FOOTER *********************/
+
+footer {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+footer a {
+  vertical-align: top;
+  margin-right: 5px;
+}
+
+footer img {
+  width: 20px;
+}
