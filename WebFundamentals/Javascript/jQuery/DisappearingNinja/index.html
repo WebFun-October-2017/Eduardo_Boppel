@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Disappearing Ninja</title>
+  <style>
+    .wrapper {
+      width: 1000px;
+      margin: 75px auto;}
+    img {
+      height: 140px;
+      width: 230px;
+      border: 1px solid black;
+      margin: 10px 5px;
+    }
+    button {
+      width: 100px;
+      height: 30px;
+      border-radius: 5px;
+      background-color: green;
+      color: white;
+    }
+  </style>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+
+    $(document).ready(function(){
+
+      $('img').click(function(){
+        $(this).hide();
+      });
+
+      $('button').click(function(){
+        $('img').show();
+
+      });
+
+
+
+
+
+
+
+    });  //End of document load
+
+  </script>
+
+</head>
+<body>
+    <div class="wrapper">
+        <h1>jQuery - Assignment 1</h1>
+
+        <img src="images/guatemala1.jpeg" alt="River">
+        <img src="images/guatemala2.jpeg" alt="Forest">
+        <img src="images/guatemala3.jpeg" alt="Tikal">
+        <img src="images/guatemala4.jpeg" alt="National Palace">
+        <img src="images/guatemala5.jpeg" alt="Semuc Champey">
+        <img src="images/guatemala6.jpeg" alt="Tikal">
+        <img src="images/guatemala7.jpeg" alt="Lake Atitlan">
+        <img src="images/guatemala8.jpeg" alt="Antigua Guatemala">
+        <button type="button" name="restore">Restore</button>
+
+    </div>
+</body>
+</html>
