@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+
+    table {
+        border: 2px solid black;
+        padding: 4px;
+        border-collapse: collapse;
+        margin: 30px auto;
+    }
+      th, td {
+        border: 2px solid gray;
+        padding: 8px 40px;
+      }
+
+      thead tr {
+        background-color: #7f7272;
+      }
+
+
+    form {
+      width: 400px;
+      margin: 0 auto;
+    }
+      .forminput {
+        margin: 15px 0;
+      }
+      .forminput label {
+        display: inline-block;
+        width: 110px;
+      }
+      .forminput input {
+        width: 250px;
+        height: 20px;
+      }
+      input.btn {
+        background-color: #0979ba;
+        width: 90px;
+        height: 30px;
+        border-radius: 5px;
+        color: white;
+        margin-left: 280px;:
+      }
+
+  </style>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+
+
+    function setColor() {
+      $('tr:odd').css("background-color", "#dddddd");
+    }
+
+
+    $(document).ready(function(){
+
+      $('form').submit(function(){
+
+        var name = $('input[name="first_name"]').val();
+        var last = $('input[name="last_name"]').val();
+        var email = $('input[name="email"]').val();
+        var phone = $('input[name="phone"]').val();
+
+        console.log(name, last, email, phone);
+        if(name === "" | last === "" | email === "" | phone === "")
+        {
+          alert("You need to fill all fields")
+        }
+
+        else {
+          $('tbody').append('<tr><td>'+name+'</td><td>'+last+'</td><td>'+email+'</td><td>'+phone+'</td></tr>');
+          setColor();
+
+          $('.forminput input').val("")
+          name = " ";
+          last = " ";
+          email = " ";
+          phone = " ";
+        }
+
+
+        return false;
+      })
+
+
+    }); // END OF DOCUMENT LOAD
+
+
+  </script>
+</head>
+<body>
+
+  <table>
+    <thead>
+      <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email Address</th>
+        <th>Contact #</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+
+  <form class="" action="index.html" method="post">
+    <h1>Add User</h1>
+
+    <div class="forminput">
+      <label for="first_name">First Name:</label>
+      <input type="text" name="first_name" value="">
+    </div>
+    <div class="forminput">
+      <label for="last_name">Last Name:</label>
+      <input type="text" name="last_name" value="">
+    </div>
+    <div class="forminput">
+      <label for="email">Email Address:</label>
+      <input type="text" name="email" value="">
+    </div>
+    <div class="forminput">
+      <label for="phone">Contact No.:</label>
+      <input type="text" name="phone" value="">
+    </div>
+    <p><i>* All fields are mandatory</i></p>
+    <input class="btn" type="submit" name="submit" value="Add User">
+
+  </form>
+
+
+</body>
+</html>
