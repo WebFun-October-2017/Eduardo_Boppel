@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contacts Page</title>
+
+  <style>
+    form {
+      display: inline-block;
+      width: 335px;
+      margin: 0 10px;
+      border: 1px solid red;
+      vertical-align: top;
+      background-color: #1bc6f9;
+      padding: 10px;
+    }
+    form h1 {
+      text-align: center;
+    }
+      .forminput {
+        margin: 15px 0;
+      }
+      .forminput label {
+        display: inline-block;
+        width: 110px;
+      }
+      .forminput input {
+        width: 210px;
+        height: 20px;
+      }
+      input.btn {
+        background-color: #0979ba;
+        width: 90px;
+        height: 30px;
+        border-radius: 5px;
+        color: white;
+        margin-left: 240px;:
+      }
+
+    #contacts {
+        display: inline-block;
+        width: 850px;
+        border: 1px solid blue;
+        padding: 10px;
+        background-color: lightgray;
+    }
+      .card {
+        display: inline-block;
+        width: 185px;
+        height: 100px;
+        border: 1px solid orange;
+        text-align: center;
+        padding: 50px 10px 10px;
+        text-transform: capitalize;
+        margin: 2px;
+        background-color: white;
+        overflow: scroll;
+    }
+      .flipped {
+        background-color: red;
+      }
+      #contacts h1 {
+        text-align: center;
+      }
+
+  </style>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+
+    $(document).ready(function(){   //BEGIN DOCUMENT LOAD
+
+
+      $(document).on('click', '.card', function(){
+        var temp = $(this).attr('data-alt');
+        $(this).attr('data-alt', $(this).text());
+        $(this).text(temp)
+        $(this).toggleClass('flipped');
+        });
+
+
+      $('form').submit(function(){
+        var name = $('input[name="first_name"]').val();
+        var last = $('input[name="last_name"]').val();
+        var email = $('input[name="email"]').val();
+        var phone = $('input[name="phone"]').val();
+        var desc = $('textarea').val();
+
+        if(name === "" | last === "" | email === "" | phone === "" | desc === "") {
+          alert("You need to fill all fields")
+        }
+        else {
+         $('#contacts').append('<div class="card" data-alt="'+email+" "+phone+" "+desc+'">'+name+" "+last+'</div>')
+
+          $('.forminput input, textarea').val("")
+          name = " ";
+          last = " ";
+          email = " ";
+          phone = " ";
+          desc = " ";
+        }
+        return false;
+      })
+
+    }); //END OF DOCUMENT LOAD
+
+
+  </script>
+</head>
+
+<body>
+
+  <form id="form" action="index.html" method="post">
+    <h1>Add New Contact</h1>
+    <div class="forminput">
+      <label for="first_name">First Name:</label>
+      <input type="text" name="first_name" value="">
+    </div>
+    <div class="forminput">
+      <label for="last_name">Last Name:</label>
+      <input type="text" name="last_name" value="">
+    </div>
+    <div class="forminput">
+      <label for="email">Email Address:</label>
+      <input type="text" name="email" value="">
+    </div>
+    <div class="forminput">
+      <label for="phone">Contact No.:</label>
+      <input type="text" name="phone" value="">
+    </div>
+    <div class="forminput">
+      <label for="description">Description:</label>
+      <textarea name="description" rows="10" cols="32"></textarea>
+    </div>
+    <p><i>* All fields are mandatory</i></p>
+    <input class="btn" type="submit" name="submit" value="Add Contact">
+  </form>
+
+  <div id="contacts">
+    <h1>My Contacts</h1>
+  </div>
+
+</body>
+</html>
