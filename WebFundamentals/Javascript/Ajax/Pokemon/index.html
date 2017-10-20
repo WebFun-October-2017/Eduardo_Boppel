@@ -9,13 +9,27 @@
   <script type="text/javascript">
 
   $(document).ready(function(){
+
+    /*    PREVIOUS METHOD WITHOUT JSON
     for(var i = 1; i < 151; i++) {
       var data = '<img src="https://raw.githubusercontent.com/PokeApi/sprites/master/sprites/pokemon/shiny/'+i+'.png">';
       $('body').append(data);
       console.log(data);
     }
+    */
 
-  });
+    for(var i = 1; i < 151; i++) {
+      $.get("https://pokeapi.co/api/v2/pokemon/"+i+"/", function(data){
+          var sprite = data.sprites.front_default;
+          console.log(sprite);
+          var image = '<img src="'+sprite+'">';
+          $('body').append(image);
+      }, 'json');
+    }
+
+
+
+  });  // END OF DOCUMENT READY
 
   </script>
 
