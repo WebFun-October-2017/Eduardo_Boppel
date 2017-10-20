@@ -8,44 +8,24 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
     $(document).ready(function(){
-      var apiKey = "f9f7050e80ce86d12d27fa7c4f0e3d71";
 
       $('form').submit(function(){
+        var apiKey = "f9f7050e80ce86d12d27fa7c4f0e3d71";
         var city = $('input[name="city"]').val();
 
         var link = 'https://api.openweathermap.org/data/2.5/weather?q='+city+'&APPID='+apiKey;
-
         $.get(link, function(data){
-
-          var name = data.name
-          var lat = data.coord.lat;
-          var long = data.coord.lon;
-          var temp = data.main.temp;
-          temp = Math.round(temp * (9/5) - 459.67);
-          var humidity = data.main.humidity;
-          var clouds = data.weather[0].description;
-          var wind = data.wind.speed;
-
-
-          $('#result').append('<h1>Name: '+name+'</h1>');
-          $('#result').append('<p>Latitud: '+lat+' Longitude: '+long+'</p>');
+          var temp = Math.round(data.main.temp * (9/5) - 459.67);
+          $('#result').append('<h1>Name: '+data.name+'</h1>');
+          $('#result').append('<p>Latitud: '+data.coord.lat+' Longitude: '+data.coord.lon+'</p>');
           $('#result').append('<p>Temperature: '+temp+' F</p>');
-          $('#result').append('<p>Humidity: '+humidity+'</p>');
-          $('#result').append('<p>Clouds: '+clouds+'</p>');
-          $('#result').append('<p>Wind: '+wind+' m/s</p>');
-
+          $('#result').append('<p>Humidity: '+data.main.humidity+'</p>');
+          $('#result').append('<p>Clouds: '+data.weather[0].description+'</p>');
+          $('#result').append('<p>Wind: '+data.wind.speed+' m/s</p>');
         }, 'json');
 
-
-
-
         return false;
-      });
-
-
-
-
-
+      });  //END OF SUBMIT FUNCTION
 
     }); // END OF DOCUMENT LOAD FUNCTION
 
