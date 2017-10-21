@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Game of Thrones</title>
+    <style media="screen">
+        .wrapper {
+          width: 1000px;
+          margin: 0 auto;
+          text-align: center;
+        }
+        img {
+          width: 245px;
+        }
+        .houseDetails {
+          margin-top: 10px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        $('img').click(function(){
+
+          var houseID = $(this).attr('id');
+          console.log(houseID);
+
+          $.get('https://www.anapioficeandfire.com/api/houses?name='+houseID, function(data){
+
+            var name = data[0].name;
+            var coat = data[0].coatOfArms;
+            var region = data[0].region;
+            var words = data[0].words;
+            var titleArray = data[0].titles;
+            var titles = "";
+
+            console.log(titleArray);
+
+            for(var i = 0; i < titleArray.length; i++) {
+                titles += " " + titleArray[i] + ",";
+            }
+
+            var html = ""
+            html += '<h2>'+name+'</h2>'
+            html += '<h3>Coat of Arms: '+coat+'</h3>'
+            html += '<h3>Region: '+region+'</h3>'
+            html += '<h4>Words: '+words+'</h3>'
+            html += '<h4>Titles: '+titles+'</h3>'
+            $('.houseDetails').html(html).css('border', '1px solid black')
+          }, 'json');
+
+
+        });
+
+      }); // END OF DOCUMENT READY
+
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Game of Thrones</h1>
+
+      <div class="images">
+        <img id="House Baratheon of Dragonstone" src="images/baratheon.png" alt="Baratheon">
+        <img id="House Lannister of Casterly Rock" src="images/lannister.jpg" alt="Lannister">
+        <img id="House Stark of Winterfell" src="images/stark.jpg" alt="Stark">
+        <img id="House Targaryen of King's Landing" src="images/targaryen.jpg" alt="Targaryen">
+      </div>
+
+      <div class="houseDetails">
+      </div>
+
+    </div> <!-- Wrapper -->
+
+  </body>
+</html>
