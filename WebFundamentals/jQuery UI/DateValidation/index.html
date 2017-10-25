@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/redmond/jquery-ui.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+  <style media="screen">
+
+    .inputbox p {
+      display: inline-block;
+
+    }
+    .error {
+      color: red;
+    }
+
+    .widget {
+      margin-top: 30px;
+    }
+
+  </style>
+  <script type="text/javascript">
+    $(document).ready(function(){
+
+      $('.error').hide();
+
+      $(function() {  // start datepicker function
+         var dateFormat = "mm/dd/yy",
+           from = $( "#from" )
+             .datepicker({
+               defaultDate: "+1w",
+               changeMonth: true,
+               numberOfMonths: 3
+             })
+             .on( "change", function() {
+               to.datepicker( "option", "minDate", getDate( this ) );
+             }),
+           to = $( "#to" ).datepicker({
+             defaultDate: "+1w",
+             changeMonth: true,
+             numberOfMonths: 3
+           })
+           .on( "change", function() {
+             from.datepicker( "option", "maxDate", getDate( this ) );
+           });
+
+         function getDate( element ) {
+           var date;
+           try {
+             date = $.datepicker.parseDate( dateFormat, element.value );
+           } catch( error ) {
+             date = null;
+           }
+           return date;
+          }
+       });  //end of datepicker function
+
+
+
+        $(function() {
+         $( ".widget input" ).checkboxradio();
+        });
+
+
+
+        $('form').submit(function(e){
+          var values = {};
+
+          $.each($(this).serializeArray(), function(i, field) {
+            values[field.name] = field.value;
+          });
+
+          if( values.name === "" || values.email === "" || values.from === "" || values.to === "") {
+             $('.error').show()
+          }
+
+          else {
+              var string = "Full Name: " + values.name +"\n"
+              string += "Email: " + values.email +"\n"
+              string += "From: " + values.from +"\n"
+              string += "to: " + values.to +"\n\n"
+
+              if(values['checkbox-1'] === "on") {
+                string += "Surfing" +"\n"
+              }
+              if (values['checkbox-2'] === "on") {
+                string += "Sky Diving" +"\n"
+              }
+              if (values['checkbox-3'] === "on") {
+                string += "Deep Sea Diving" +"\n"
+              }
+              if (values['checkbox-4'] === "on") {
+                  string += "White Water Rafting" +"\n"
+              }
+              alert(string)
+
+          }
+          return false;
+        });
+
+      });
+
+  </script>
+
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Tour Reservation</h1>
+
+  <form action="index.html" method="post">
+      <div class="inputbox">
+        <p>Full Name: <input type="text" name="name" value=""></p>
+        <p class="error">Enter your name</p>
+      </div>
+
+      <div class="inputbox">
+        <p>Email<input type="text" name="email" value=""></p>
+        <p class="error">Enter your name</p>
+      </div>
+
+
+      <div class="inputbox">
+        <label for="from">From</label>
+        <input type="text" id="from" name="from">
+        <p class="error">Enter your name</p>
+      </div>
+
+      <div class="inputbox">
+        <label for="to">To</label>
+        <input type="text" id="to" name="to">
+        <p class="error">Enter your name</p>
+      </div>
+
+      <div class="widget">
+        <fieldset>
+          <legend>Select your options: </legend>
+          <label for="checkbox-1">Surfing</label>
+          <input type="checkbox" name="checkbox-1" id="checkbox-1">
+          <label for="checkbox-2">Sky Diving</label>
+          <input type="checkbox" name="checkbox-2" id="checkbox-2">
+          <label for="checkbox-3">Deep Sea Diving</label>
+          <input type="checkbox" name="checkbox-3" id="checkbox-3">
+          <label for="checkbox-4">White Water Rafting</label>
+          <input type="checkbox" name="checkbox-4" id="checkbox-4">
+        </fieldset>
+    </div>
+
+    <input type="submit" name="submit" id="Check Availability">
+
+  </form>
+</body>
+</html>
